@@ -1,11 +1,11 @@
 # WaveLightNet: A Wavelet Decomposition Filter based CNN-LSTMNetwork for 6DOF Pose Estimation of Origami Robot
 
-### Proposed Architecture
+### Wavelet Decomposition
 <p>
-  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/Images/Wavelet%20Decomposition.png" width=500 height=500 >  
+  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/Images/Wavelet%20Decomposition.png" width=300 height=300 >  
 </p>
 
-### Wavelet Decomposition
+### Proposed Architecture
 <p>
   <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/Images/Model%20Architecture.png" width=900 height=600 >  
 </p>
