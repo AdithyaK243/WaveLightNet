@@ -2,7 +2,7 @@
 
 ### Wavelet Decomposition
 <p>
-  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/figues/Wavelet%20Decomposition.png" width=300 height=300 >  
+  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/figures/Wavelet%20Decomposition.png" width=300 height=300 >  
 </p>
 
 ### Proposed Architecture
