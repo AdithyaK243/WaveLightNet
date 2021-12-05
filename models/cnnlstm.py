@@ -9,7 +9,7 @@ from keras.layers import Dense
 import keras.backend as K
 from keras.layers import LeakyReLU
 
-def model(inp_size):
+def reg_model(inp_size, model_name = 'CnnLstm'):
     '''
         Model function to create the CNN-LSTM network to regress the 6DOF pose vector
 
@@ -17,7 +17,7 @@ def model(inp_size):
         Output: Returns the model
     '''
     inp = Input(inp_size)
-    conv1 = Conv2D(16, (3, 3), padding='same',activation = 'relu',kernel_initializer='normal', input_shape = (56, 56,3))(inp)
+    conv1 = Conv2D(16, (3, 3), padding='same',activation = 'relu',kernel_initializer='normal', input_shape = inp_size)(inp)
     pool1 = MaxPooling2D()(conv1)
     drop1 = Dropout(0.25)(pool1)
 
@@ -30,11 +30,19 @@ def model(inp_size):
     pool3 = Dropout(0.25)(pool3)
 
     out_e = tf.reshape(pool3, (-1, 49, 32))
-    lstm = LSTM(128,return_sequences=True,input_shape = (49, 32))(out_e)
-    flat = Flatten()(lstm)
-    dense1 = Dense(64)(flat)
-    dense2 = Dense(6)(dense1)
-    out = LeakyReLU(alpha=0.1)(dense2)
-
+    if model_name=='CnnLstm':
+        lstm = LSTM(128,return_sequences=True,input_shape = (49, 32))(out_e)
+        flat = Flatten()(lstm)
+        dense1 = Dense(64)(flat)
+        dense2 = Dense(6)(dense1)
+        out = LeakyReLU(alpha=0.1)(dense2)
+    elif model_name=='Cnn':
+        flat = Flatten()(out_e)
+        dense1 = Dense(64)(flat)
+        dense2 = Dense(6)(dense1)
+        out = LeakyReLU(alpha=0.1)(dense2)
+        
     model = Model(inputs = inp, outputs=out)
     print(model.summary())
+
+    return model
