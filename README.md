@@ -90,4 +90,4 @@ Rz | 0.5173 - 0.1706 | **0.0606** - **0.0039**
 
 ## Contact
 
-For any queries, please contact [Adithya K Krishna](mailto:adithya.krishnakumar@gmail.com) or [Lalithkumar](mailto:lalithjets@gmail.com)
+For any queries, please contact [Adithya K Krishna](mailto:adithya.krishnakumar@gmail.com) or [Lalithkumar Seenivasan](mailto:lalithjets@gmail.com)
