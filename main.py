@@ -99,17 +99,25 @@ def main():
     parser = argparse.ArgumentParser()
 
     # hyper parameters
-    parser.add_argument('--lr',          type=float, default = 0.01)
-    parser.add_argument('--epoch',       type=int,   default = 10)
-    parser.add_argument('--batch_size',  type=int,   default = 12)
+    parser.add_argument('--lr',                type=float, default = 0.01)
+    parser.add_argument('--epoch',             type=int,   default = 10)
+    parser.add_argument('--batch_size',        type=int,   default = 12)
 
     # training & testing parameters
-    parser.add_argument('--case',        type=bool,  default=False)
-    parser.add_argument('--data',        type=bool,  default=False)
-    parser.add_argument('--train',       type=bool,  default=False)
-    parser.add_argument('--test_model',  type=bool,  default=True) 
-    parser.add_argument('--model_name',  type=str,   default='CnnLstm')
-    parser.add_argument('--chkpt_path',  type=str,   default='checkpoints/CnnLstm_FeatExt_dataFalse_trainFalse.h5')   
+    parser.add_argument('--case',              type=bool,  default=False)
+    parser.add_argument('--data',              type=bool,  default=False)
+    parser.add_argument('--train',             type=bool,  default=False)
+    parser.add_argument('--test_model',        type=bool,  default=True) 
+    parser.add_argument('--model_name',        type=str,   default='CnnLstm')
+    parser.add_argument('--chkpt_path',        type=str,   default='checkpoints/CnnLstm_FeatExt_dataFalse_trainFalse.h5')  
+
+    #benchmarking dataset
+    parser.add_argument('--linemod',           type=bool,  default=False) 
+    parser.add_argument('--process_linemod',   type=bool,  default=False)
+    parser.add_argument('--path_chkpt_linemod',type=str,   default='checkpoints/linemod/CnnLstm_LinemodFalse_trainFalse.h5') 
+ 
+    #SOTA model
+    
 
     args = parser.parse_args()
 
