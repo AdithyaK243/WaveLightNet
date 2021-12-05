@@ -60,8 +60,8 @@ Arguments
 - batch_size
 
 - case : Boolean value to decide whether to add or remove Wavelet feature extraction (default:True)
-- data : Shuffle data while loading  (default :False)
-- train: Shuffle while forming batches (default :False)
+- shuffle_data : Shuffle data while loading  (default :False)
+- shuffle_train: Shuffle while forming batches (default :False)
 - test_model: Whether to carry out training or testing (default: False)
 - model_name : ['Cnn', 'CnnLstm', 'Linemod'] one of the three string names can be used (default: CnnLstm)
 - chkpt_path: Path to checkpoint file when test_model is True    

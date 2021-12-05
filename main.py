@@ -105,8 +105,8 @@ def main():
 
     # training & testing parameters
     parser.add_argument('--case',              type=bool,  default=False)
-    parser.add_argument('--data',              type=bool,  default=False)
-    parser.add_argument('--train',             type=bool,  default=False)
+    parser.add_argument('--shuffle_data',              type=bool,  default=False)
+    parser.add_argument('--shuffle_train',             type=bool,  default=False)
     parser.add_argument('--test_model',        type=bool,  default=True) 
     parser.add_argument('--model_name',        type=str,   default='CnnLstm')
     parser.add_argument('--chkpt_path',        type=str,   default='checkpoints/CnnLstm_FeatExt_dataFalse_trainFalse.h5')  
@@ -127,7 +127,7 @@ def main():
 
         results(model,  X_test_i, X_test_o, X_test_s, y_test_i, y_test_o, y_test_s)
     else:
-        X_train, X_val, y_train, y_val, X_test_i, X_test_o, X_test_s, y_test_i, y_test_o, y_test_s = train_data_loader(args.data, args.case)
+        X_train, X_val, y_train, y_val, X_test_i, X_test_o, X_test_s, y_test_i, y_test_o, y_test_s = train_data_loader(args.shuffle_data, args.case)
 
         model = reg_model((56,56,3), args.model_name)
 
@@ -135,12 +135,12 @@ def main():
         model.compile(optimizer = SGD(learning_rate = args.lr) , loss = tf.keras.losses.MeanSquaredError(),metrics=['mse', 'mae']) #Adam(learning_rate=3e-4)
 
         #training the data
-        history2 = model.fit(X_train,y_train,batch_size = args.batch_size, epochs = args.epoch, verbose = 1,validation_data = (X_val, y_val),shuffle = args.train)
+        history2 = model.fit(X_train,y_train,batch_size = args.batch_size, epochs = args.epoch, verbose = 1,validation_data = (X_val, y_val),shuffle = args.shuffle_train)
 
         now = datetime.now()
 
         # save model and architecture to single file
-        model.save('checkpoints/' + now + '_' + args.model_name + 'FeatExt_' + args.case + '_data' + str(args.data) + '_train' + str(args.train) + ".h5")
+        model.save('checkpoints/' + now + '_' + args.model_name + 'FeatExt_' + args.case + '_data' + str(args.shuffle_data) + '_train' + str(args.shuffle_train) + ".h5")
         print("Saved model to disk")
 
         plot(history2)
