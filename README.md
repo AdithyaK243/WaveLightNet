@@ -2,7 +2,7 @@
 
 <samp>
 
-<h1> WaveLightNet: A Wavelet Decomposition Filter based CNN-LSTMNetwork for 6DOF Pose Estimation of Origami Robot  </h1>
+<h1> WaveLightNet: A Wavelet Decomposition Filter based CNN-LSTM Network for 6DOF Pose Estimation of Origami Robot  </h1>
 
 <h3> Adithya K Krishna, Seenivasan lalithkumar, Hongliang Ren </h3>
 
