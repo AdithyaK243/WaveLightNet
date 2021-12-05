@@ -17,7 +17,7 @@
 
 ### Proposed Architecture
 <p>
-  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/figures/Model%20Architecture.png" width=900 height=600 >  
+  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/figures/Model%20Architecture.png" width=900 height=400 >  
 </p>
 
 ## Datasets
@@ -89,7 +89,7 @@ Rx | 4.8255 - 0.7527 | **4.4678** - **0.1163**
 Ry | 0.4279 - 0.0233 | **0.2963** - **0.1050** 
 Rz | 0.5173 - 0.1706 | **0.0606** - **0.0039** 
 
--- 
+
 ## Contact
 
 For any queries, please contact [Adithya K Krishna](mailto:adithya.krishnakumar@gmail.com) or [Lalithkumar](mailto:lalithjets@gmail.com)
