@@ -17,7 +17,7 @@
 
 ### Proposed Architecture
 <p>
-  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/figures/Model%20Architecture.png" width=900 height=400 >  
+  <img src="https://github.com/AdithyaK243/WaveLightNet/blob/main/figures/Model%20Architecture.png" width=900 height=500 >  
 </p>
 
 ## Datasets
@@ -74,7 +74,6 @@ For Testing:
 ```bash
 python main.py --test_model True chkpt_path <path to h5 saved weights>
 ```
---
 
 ## Results
  Comparison with SOTA:
