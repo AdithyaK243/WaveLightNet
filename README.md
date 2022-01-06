@@ -4,6 +4,7 @@
 
 <h1> WaveLightNet: A Wavelet Decomposition Filter based CNN-LSTM Network for 6DOF Pose Estimation of Origami Robot  </h1>
 
+<h3> Adithya K Krishna, Seenivasan lalithkumar, Hongliang Ren </h3>
 </samp>   
 
 </div>     
@@ -84,3 +85,8 @@ Tz | **0.0607** - 0.0038 | 0.0738 - **0.0117**
 Rx | 4.8255 - 0.7527 | **4.4678** - **0.1163** 
 Ry | 0.4279 - 0.0233 | **0.2963** - **0.1050** 
 Rz | 0.5173 - 0.1706 | **0.0606** - **0.0039** 
+
+---
+## Contact
+
+For any queries, please contact or [Adithya K Krishna](mailto:adithya.krishnakumar@gmail.com) or [Lalithkumar](mailto:lalithjets@gmail.com)
